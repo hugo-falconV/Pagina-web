@@ -128,6 +128,44 @@ header nav ul li a{
 	background: rgba(0,0,0,.5);
 	padding-bottom:10px;
 }
+#galeria{
+	position: relative;
+	margin: auto;
+	width: 100%;
+}
+
+#galeria ul{
+	padding: 20px;
+}
+
+#galeria ul li{
+	padding: 10px;
+	cursor: pointer;
+	transition: .6s;
+}
+
+#galeria ul li:hover{
+	transition: .6s;
+	opacity: .6;
+}
+
+#galeria ul li img{
+	width: 100%                    ;
+}
+
+#efectoMouse{
+	overflow: hidden;
+	width: 100%;
+	position: relative;
+	
+}
+
+#efectoMouse figure{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
 
 @media(min-width:1200px){
 
