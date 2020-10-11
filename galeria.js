@@ -1,3 +1,4 @@
+// OBJETO CON LAS PROPIEDADES DE LA GALERIA
 
 var pg = {
 
@@ -12,6 +13,10 @@ var pg = {
 
 }
 
+
+
+
+// OBJETOS CON LOS METODOS DE LA GALERIA
 
 var mg = {
 

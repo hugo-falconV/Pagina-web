@@ -1,3 +1,6 @@
+// OBEJTO CON LAS PROPIEDADES DEL SLIDE
+
+
 var p = {
 
     paginacion: document.querySelectorAll("#paginacion li"),
@@ -9,7 +12,16 @@ var p = {
     retroceder: document.querySelector("#slide #retroceder"),
     velocidadSlide: 3000,
     formatearLoop: false
+
+
+
 }
+
+
+
+
+// OBJETO CON LOS METODOS DEL SLIDE
+
 
 var m = {
 
@@ -18,15 +30,12 @@ var m = {
         for(var i=0; i<p.paginacion.length; i++){
 
             p.paginacion[i].addEventListener("click",m.paginacionSlide)
-            p.imgSlide[i].style.width = (100/p.paginacion.length) + "%"
         }
 
         p.avanzar.addEventListener("click",m.avanzar)
         p.retroceder.addEventListener("click",m.retroceder)
 
         m.intervalo()
-
-        p.cajaSlide.style.width = (p.paginacion.length*100)+ "%"
 
     },
 
@@ -56,7 +65,6 @@ var m = {
         }
         m.movimientoSlide(p.item)
     },
-
     movimientoSlide: function(item){
 
         p.formatearLoop = true
@@ -72,7 +80,22 @@ var m = {
 
         if(p.animacionSlide == "slide"){
             p.cajaSlide.style.transition = ".7s left ease-in-out";
-        }   
+        }
+
+        /* para usar esta animacion cambiar  animacionSlide: "slide" por "fade"
+        if(p.animacionSlide == "fade"){
+
+            p.imgSlide[item].style.opacity = 0
+            p.imgSlide[item].style.transition = ".7s opacity ease-in-out"
+
+            setTimeout(function(){
+
+                p.imgSlide[item].style.opacity = 1
+
+            },500)
+        }   */
+
+        
     },
 
     intervalo: function(){
